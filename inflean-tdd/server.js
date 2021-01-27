@@ -6,6 +6,14 @@ const HOST = '0.0.0.0';
 //App
 const app = express();
 const prodictRoutes = require('./routes');
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb+srv://admin:admin@react-clone-1.izgtn.mongodb.net/hello?retryWrites=true&w=majority',
+{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => console.log('MongoFb Connected....'))
+.catch((err) => console.log(err));
 
 //middleware
 app.use(express.json());
