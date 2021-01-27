@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 
 const PORT = 5000;
@@ -8,7 +10,9 @@ const app = express();
 const prodictRoutes = require('./routes');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://admin:admin@react-clone-1.izgtn.mongodb.net/hello?retryWrites=true&w=majority',
+const dbURL = process.env.MONGOOSE;
+
+mongoose.connect(dbURL,
 {
     useNewUrlParser: true,
     useUnifiedTopology: true

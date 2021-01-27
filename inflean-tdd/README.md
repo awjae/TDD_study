@@ -25,3 +25,5 @@
 7. describe : 그룹(관련된 테스트) 단위
     it : 테스트 단위
     expect <=> matcher : 
+
+8. jest.fn(); Mock 함수를 생성하는 함수 
