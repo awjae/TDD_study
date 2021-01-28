@@ -27,3 +27,5 @@
     expect <=> matcher : 
 
 8. jest.fn(); Mock 함수를 생성하는 함수 
+
+9. jest의 기본환경은 jsdom , mongoose를 사용하기위해선 node로 변경해줘야됨
