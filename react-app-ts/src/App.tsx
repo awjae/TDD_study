@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Main from './pages/Main';
 import {
   BrowserRouter as Router,
   Routes,
@@ -38,12 +39,16 @@ function App() {
               <li>
                 <Link to="/dashboard">Dashboard</Link>
               </li>
+              <li>
+                <Link to="/pages/main">Main</Link>
+              </li>
             </ul>
             <hr />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/pages/main" element={<Main />} />
             </Routes>
           </div>
         </Router>
