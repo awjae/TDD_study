@@ -17,11 +17,19 @@ function PhotoItem({ photo: { urls, alt } }) {
   );
 }
 
-const ImageWrap = styled.div``;
+const ImageWrap = styled.div`
+  width: 100%;
+  padding-bottom: 56.25%;
+  position: relative;
+`;
 
 const Image = styled.img`
   cursor: pointer;
   width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  left: 0px;
 `;
 
 export default PhotoItem;
