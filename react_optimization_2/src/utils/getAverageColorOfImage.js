@@ -1,4 +1,10 @@
-export function getAverageColorOfImage(imgElement) {
+const cache = {};
+
+export const getAverageColorOfImage = memoize(function (imgElement) {
+  if (cache.hasOwnProperty(imgElement.src)) {
+    return cache[imgElement.src];
+  }
+
   const canvas = document.createElement('canvas');
   const context = canvas.getContext && canvas.getContext('2d');
   const averageColor = {
@@ -31,6 +37,8 @@ export function getAverageColorOfImage(imgElement) {
   averageColor.r = ~~(averageColor.r / count); // ~~ => convert to int
   averageColor.g = ~~(averageColor.g / count);
   averageColor.b = ~~(averageColor.b / count);
+
+  cache[imgElement.src] = imgElement;
 
   return averageColor;
 }
