@@ -1,6 +1,6 @@
 const cache = {};
 
-export const getAverageColorOfImage = memoize(function (imgElement) {
+export function getAverageColorOfImage (imgElement) {
   if (cache.hasOwnProperty(imgElement.src)) {
     return cache[imgElement.src];
   }
